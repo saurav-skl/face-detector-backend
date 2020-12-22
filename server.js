@@ -12,9 +12,9 @@ const image = require("./Control/Image");
 const db = knex({
   client: "pg",
   connection: {
-    host: "127.0.0.1", //localhost
+    host: "postgresql-contoured-71791", //localhost
     user: "postgres", //add your user name for the database here
-    password: "test", //add your correct password in here
+    password: "", //add your correct password in here
     database: "postgres", //add your database name you created here
   },
 });
