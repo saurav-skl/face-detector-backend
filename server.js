@@ -62,13 +62,16 @@ app.post("/register", (req, res) => {
   // console.log(email,hash);
   db.transaction((trx) => {
     trx
-    .insert({
-      hash: hash,
-      email: email,
-    },'id')
-    .into("login")
-    .returning("email")
-    .then((loginEmail) => {
+      .insert(
+        {
+          hash: hash,
+          email: email,
+        },
+        "id"
+      )
+      .into("login")
+      .returning("email")
+      .then((loginEmail) => {
         // console.log(loginEmail[0]);
         return trx("person")
           .returning("*")
