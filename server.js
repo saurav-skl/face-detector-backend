@@ -56,6 +56,12 @@ app.post("/imageUrl",(req,res)=>{
   image.handleApi(req,res);
 })
 
-app.listen(3001, () => {
-  console.log("Success on port 3001");
-});
+// app.listen(3001, () => {
+//   console.log("Success on port 3001");
+// });
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
