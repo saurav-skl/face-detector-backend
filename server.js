@@ -32,7 +32,7 @@ app.use(cors());
 app.use(bodyparser.json());
 
 app.get("/", (req, res) => {
-  res.send(db.person);
+  res.send("Its Working");
   //   console.log(database)
 });
 
