@@ -5,7 +5,7 @@ const app = new Clarifai.App({
 });
 
 const handleApi = (req, res) => {
-    // console.log(req.body);
+    console.log(req.body);
   
       // Sometimes the Clarifai Models can be down or not working as they are constantly getting updated.
       // A good way to check if the model you are using is up, is to check them on the clarifai website. For example,
