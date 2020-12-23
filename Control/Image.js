@@ -1,11 +1,11 @@
 const Clarifai = require("clarifai");
 
 const app = new Clarifai.App({
-  apiKey: "a556aa67827941a7a19ea02c39ab88f6",
+  apiKey: MY_API_KEY,
 });
 
 const handleApi = (req, res) => {
-  console.log("api url : " + req.body);
+  // console.log("api url : " + req.body);
 
   // Sometimes the Clarifai Models can be down or not working as they are constantly getting updated.
   // A good way to check if the model you are using is up, is to check them on the clarifai website. For example,
