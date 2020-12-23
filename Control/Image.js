@@ -5,7 +5,7 @@ const app = new Clarifai.App({
 });
 
 const handleApi = (req, res) => {
-    console.log(req.body);
+    console.log("api url : "+ req.body);
   
       // Sometimes the Clarifai Models can be down or not working as they are constantly getting updated.
       // A good way to check if the model you are using is up, is to check them on the clarifai website. For example,
@@ -22,7 +22,7 @@ const handleApi = (req, res) => {
     .then((data) => {
       res.json(data);
     })
-    .catch(err => res.status(400).json("Unable to work with api"))
+    .catch(err => res.status(400).json(err + " Unable to work with api"))
 };
 
 const handleImage = (req, res, db) => {
